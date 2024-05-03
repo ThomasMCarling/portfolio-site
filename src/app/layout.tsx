@@ -23,12 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
       <body className={`font-sans antialiased ${inter.variable}`}>
         <ThemeProvider>
-          <div className="min-h-dvh bg-white dark:bg-zinc-950">
+          <div className="mr-[calc(-1*(100vw-100%))] min-h-dvh bg-white dark:bg-zinc-950">
             <Header className="m-auto max-w-4xl px-6" />
-            <main className="m-auto max-w-4xl px-6 pt-4">{children}</main>
+            <main className="m-auto max-w-4xl px-9 pt-6 sm:px-6 lg:pt-3.5">
+              {children}
+            </main>
           </div>
         </ThemeProvider>
       </body>

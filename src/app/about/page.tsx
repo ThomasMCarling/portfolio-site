@@ -7,9 +7,11 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <h1 className="flex justify-center pt-1.5 text-4xl font-extrabold tracking-tight lg:pt-4 lg:text-5xl">
-        About me
-      </h1>
+      <div className="flex sm:justify-center ">
+        <h1 className="w-[16.75rem] text-4xl font-extrabold tracking-tight lg:w-[22.5rem] lg:text-5xl">
+          About me
+        </h1>
+      </div>
       <div className="flex flex-col gap-6 px-2 pb-1 pt-10 leading-7">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>{" "}
         <p>
