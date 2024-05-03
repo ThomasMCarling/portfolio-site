@@ -7,7 +7,9 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "e2e": "pnpm exec playwright test",
+    "e2e:ui": "pnpm e2e --ui --project=chromium"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.0.6",
@@ -26,6 +28,7 @@
     "zod": "^3.23.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.43.1",
     "@types/eslint": "^8.56.2",
     "@types/node": "^20.11.20",
     "@types/react": "^18.2.57",
@@ -40,5 +43,5 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.2"
   },
-  "packageManager": "pnpm@9.0.4"
+  "packageManager": "pnpm@9.0.6"
 }
