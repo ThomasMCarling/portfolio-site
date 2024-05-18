@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased ${inter.variable}`}>
         <ThemeProvider>
           <div className="mr-[calc(-1*(100vw-100%))] min-h-dvh">
-            <Header className="m-auto max-w-4xl px-6" />
+            <Header className="m-auto max-w-4xl px-6 pt-4" />
             <main className="m-auto max-w-4xl px-9 pt-6 sm:px-6 lg:pt-3.5">
               {children}
             </main>
