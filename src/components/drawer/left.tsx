@@ -1,12 +1,13 @@
 import { cn } from "~/lib/utils";
-import { Root as DrawerRoot, Trigger, Portal, Overlay, Content } from "./vaul";
+import { Trigger, Portal, Overlay, Content } from "./vaul";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { NavigationMenuLink } from "../navigation-menu/link";
 import { List, Root as NavRoot } from "../navigation-menu/primitives";
 import { env } from "~/env";
+import { Root as DrawerRoot } from "./root";
 
 export const LeftDrawer = () => (
-  <DrawerRoot direction="left">
+  <DrawerRoot>
     <Trigger
       className={cn(
         "group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium",
