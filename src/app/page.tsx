@@ -1,6 +1,6 @@
 export default function HomePage() {
   return (
-    <div className="flex sm:justify-center ">
+    <div className="flex sm:justify-center">
       <hgroup className="flex select-none flex-col gap-2 lg:gap-3">
         <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">
           Thomas Carling
