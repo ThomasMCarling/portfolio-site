@@ -8,7 +8,7 @@ export default function About() {
   return (
     <>
       <div className="flex sm:justify-center ">
-        <h1 className="w-[16.75rem] text-4xl font-extrabold tracking-tight lg:w-[22.5rem] lg:text-5xl">
+        <h1 className="w-[16.75rem] select-none text-4xl font-extrabold tracking-tight lg:w-[22.5rem] lg:text-5xl">
           About me
         </h1>
       </div>
