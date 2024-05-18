@@ -15,7 +15,7 @@ export const LeftDrawer = () => (
         "select-none",
       )}
     >
-      <HamburgerMenuIcon />
+      <HamburgerMenuIcon className="size-5" />
     </Trigger>
     <Portal>
       <Overlay className="fixed inset-0 z-50 bg-black/80 sm:hidden" />
