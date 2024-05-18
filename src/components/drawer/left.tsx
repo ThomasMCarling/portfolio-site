@@ -3,6 +3,7 @@ import { Root as DrawerRoot, Trigger, Portal, Overlay, Content } from "./vaul";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { NavigationMenuLink } from "../navigation-menu/link";
 import { List, Root as NavRoot } from "../navigation-menu/primitives";
+import { env } from "~/env";
 
 export const LeftDrawer = () => (
   <DrawerRoot direction="left">
@@ -25,13 +26,13 @@ export const LeftDrawer = () => (
             <NavigationMenuLink route="/">Home</NavigationMenuLink>
             <NavigationMenuLink route="/about">About</NavigationMenuLink>
             <div className="h-10"></div>
-            <NavigationMenuLink route="https://www.linkedin.com/in/thomas-carling-257b4b233">
+            <NavigationMenuLink route={env.LINKEDIN_URL}>
               LinkedIn
             </NavigationMenuLink>
-            <NavigationMenuLink route="https://github.com/ThomasMCarling">
+            <NavigationMenuLink route={env.GITHUB_URL}>
               GitHub
             </NavigationMenuLink>
-            <NavigationMenuLink route="https://github.com/ThomasMCarling/portfolio-site">
+            <NavigationMenuLink route={env.SOURCE_URL}>
               Source
             </NavigationMenuLink>
           </List>

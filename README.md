@@ -47,13 +47,15 @@ git clone https://github.com/ThomasMCarling/portfolio-site.git
 cd portfolio-site
 ```
 
-3. Install the dependencies
+3. Create a file named .env at the root of the project, and add each environment variable listed in .env.example
+
+4. Install the dependencies
 
 ```bash
 pnpm i
 ```
 
-4. Run the development server
+5. Run the development server
 
 ```bash
 pnpm dev

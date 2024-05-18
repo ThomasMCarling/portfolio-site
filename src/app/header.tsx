@@ -12,6 +12,7 @@ import { SubNavigationMenu } from "~/components/navigation-menu/sub-root";
 import { SubNavigationMenuLink } from "~/components/navigation-menu/sub-link";
 import { Links } from "~/components/svg/links";
 import { LeftDrawer } from "~/components/drawer/left";
+import { env } from "~/env";
 
 export const Header = ({ className }: { className: string }) => {
   return (
@@ -33,7 +34,7 @@ export const Header = ({ className }: { className: string }) => {
       <div className="flex">
         <NavigationMenu ariaLabel="">
           <NavigationMenuList>
-            <NavigationMenuLink route="https://github.com/ThomasMCarling/portfolio-site">
+            <NavigationMenuLink route={env.SOURCE_URL}>
               <CodeIcon className="h-[1.2rem] w-[1.2rem] transition-transform duration-500 group-data-[state=open]:rotate-180" />
               <span className="sr-only">Source code</span>
             </NavigationMenuLink>
@@ -45,11 +46,11 @@ export const Header = ({ className }: { className: string }) => {
                 </>
               }
             >
-              <SubNavigationMenuLink href="https://www.linkedin.com/in/thomas-carling-257b4b233">
+              <SubNavigationMenuLink href={env.LINKEDIN_URL}>
                 <LinkedInLogoIcon className="size-5" /> LinkedIn
               </SubNavigationMenuLink>
-              <SubNavigationMenuLink href="https://github.com/ThomasMCarling">
-                <GitHubLogoIcon className="size-5" /> Github
+              <SubNavigationMenuLink href={env.GITHUB_URL}>
+                <GitHubLogoIcon className="size-5" /> GitHub
               </SubNavigationMenuLink>
             </SubNavigationMenu>
           </NavigationMenuList>
