@@ -11,10 +11,19 @@ import { cn } from "~/lib/utils";
 import { SubNavigationMenu } from "~/components/navigation-menu/sub-root";
 import { SubNavigationMenuLink } from "~/components/navigation-menu/sub-link";
 import { Links } from "~/components/svg/links";
+import { LeftDrawer } from "~/components/drawer/left";
 
 export const Header = ({ className }: { className: string }) => {
   return (
-    <header className={cn("flex w-full justify-between gap-3 pt-4", className)}>
+    <header
+      className={cn(
+        "mt-1 flex h-12 w-full items-center justify-between gap-3 pt-3",
+        className,
+      )}
+    >
+      <div className="sm:hidden">
+        <LeftDrawer />
+      </div>
       <NavigationMenu ariaLabel="Main">
         <NavigationMenuList>
           <NavigationMenuLink route="/">Home</NavigationMenuLink>
@@ -22,7 +31,7 @@ export const Header = ({ className }: { className: string }) => {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex">
-        <NavigationMenu>
+        <NavigationMenu ariaLabel="">
           <NavigationMenuList>
             <NavigationMenuLink route="https://github.com/ThomasMCarling/portfolio-site">
               <CodeIcon className="h-[1.2rem] w-[1.2rem] transition-transform duration-500 group-data-[state=open]:rotate-180" />
@@ -44,8 +53,8 @@ export const Header = ({ className }: { className: string }) => {
               </SubNavigationMenuLink>
             </SubNavigationMenu>
           </NavigationMenuList>
-          <ThemeToggle />
         </NavigationMenu>
+        <ThemeToggle />
       </div>
     </header>
   );

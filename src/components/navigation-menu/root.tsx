@@ -12,7 +12,7 @@ export const NavigationMenu = ({
 }) => (
   <Root
     aria-label={ariaLabel}
-    className="relative z-10 flex max-w-max flex-1 items-center justify-center"
+    className="relative z-10 hidden max-w-max flex-1 items-center justify-center sm:flex"
   >
     {children}
     <div className="absolute right-0 top-full flex justify-center">
