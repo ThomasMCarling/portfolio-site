@@ -1,7 +1,6 @@
-# [thomascarling.com](www.thomascarling.com)
+# [thomascarling.com](https://www.thomascarling.com)
 
-![](https://deploy-badge.vercel.app/?url=https://www.thomascarling.com/&name=thomascarling.com&style=plastic)
-![](https://deploy-badge.vercel.app/?url=https://www.thomascarling.co.uk/&name=thomascarling.co.uk&style=plastic)
+![](https://deploy-badge.vercel.app/?url=https://www.thomascarling.com/&name=status&style=plastic)
 
 My portfolio site, written mostly in Typescript.
 
