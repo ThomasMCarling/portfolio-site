@@ -1,5 +1,5 @@
+import { cn } from "~/lib/utils";
 import { Content, Item, Sub, Trigger } from "./primitives";
-import { clsx } from "clsx";
 import { type ReactNode } from "react";
 
 export const SubNavigationMenu = ({
@@ -12,7 +12,7 @@ export const SubNavigationMenu = ({
   return (
     <Item>
       <Trigger
-        className={clsx(
+        className={cn(
           "group inline-flex h-9 w-max items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-medium",
           "transition-colors hover:bg-zinc-100 hover:text-zinc-900 focus:bg-zinc-100 focus:text-zinc-900 focus:outline-none",
           "disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-zinc-100/50 data-[state=open]:bg-zinc-100/50 dark:bg-zinc-950",
@@ -23,7 +23,7 @@ export const SubNavigationMenu = ({
         {trigger}
       </Trigger>
       <Content
-        className={clsx(
+        className={cn(
           "right-0 top-0 w-full",
           "data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in",
           "data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52",
