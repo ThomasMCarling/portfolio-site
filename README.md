@@ -1,29 +1,60 @@
-# Create T3 App
+# ThomasCarling.com
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+![](https://deploy-badge.vercel.app/?url=https://portfolio-site-jade-nine.vercel.app/&name=portfolio-site-jade-nine.vercel.app&style=plastic)
 
-## What's next? How do I make an app with this?
+My portfolio site, written mostly in Typescript.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Tooling
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+- [React](https://react.dev/), a declarative javascript framework used to create dynamic web applications
+- [NextJs](https://nextjs.org/), a React framework with a focus on [Server Side Rendering](https://nextjs.org/docs/pages/building-your-application/rendering/server-side-rendering)
+- [Tailwind CSS](https://tailwindcss.com), an [atomic CSS](https://css-tricks.com/lets-define-exactly-atomic-css/) framework, for styling
+- [Typescript](https://www.typescriptlang.org/), a programming language that is a superset of Javascript, plus compile time type-checking
+- [pnpm](https://pnpm.io/), a package manager, and better alternative to the widely used [npm](https://www.npmjs.com/)
+- [eslint](https://eslint.org/), a static code analysis tool to highlight any problematic javascript patterns, before they cause problems
+- [prettier](https://prettier.io/), an opinionated code formatting tool that keeps my formatting consistent
+- [playwright](https://playwright.dev/), an end-to-end testing framework
+- [radix-ui](https://www.radix-ui.com/primitives), unstyled react primitives to improve the accessibilty of the components
+- [shadcn](https://ui.shadcn.com/), a styled component scaffolding tool, built on top of radix primitives and helpful for quick prototyping
+- [zod](https://zod.dev/), an expressive schema validation library
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Architecture
 
-## Learn More
+This project uses the new [App router](https://nextjs.org/docs/app) model. Routing is file based, inside of src/app. Specific file name conventions can be found [here](https://nextjs.org/docs/app/api-reference/file-conventions), and files named any other way (such as header.tsx) are ignored by the router.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+The 'lib' and 'components/ui' directory are used by shadcn, with the components directory containing any generated components, and lib containing the cn utility (a useful function to combine tailwind classes without name clashes, and also simplify the syntax of adding conditional classes). I don't intend to add any additional code to either folder.
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+Any reusable components that I write will be in the components directory, or subdirectories excluding ui. Most of the jsx components are server components by default, and any client components are explicitly marked with 'use client' at the top of the page, or rendered by a client component.
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+## Deployment
 
-## How do I deploy this?
+This project is deployed on Vercel, using the Vercel github integration. Any changes to the main branch will trigger a production build, and no manual steps are required.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Run Locally
+
+> [!IMPORTANT]  
+> These instructions assume you already have git and pnpm installed on your machine. If you don't, then you will need to follow the instructions [here (for git)](https://git-scm.com/) and [here (for pnpm)](https://pnpm.io/installation)
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/ThomasMCarling/portfolio-site.git
+```
+
+2. Navigate to the cloned project directory from a cli
+
+```bash
+cd portfolio-site
+```
+
+3. Install the dependencies
+
+```bash
+pnpm i
+```
+
+4. Run the development server
+
+```bash
+pnpm dev
+```
