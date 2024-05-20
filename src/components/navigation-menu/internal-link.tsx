@@ -12,9 +12,6 @@ export const InternalNavigationMenuLink = ({
   children: ReactNode;
 }) => {
   const currentPath = usePathname();
-
-  console.log(currentPath);
-
   return (
     <NavigationMenuLink
       className={cn(
