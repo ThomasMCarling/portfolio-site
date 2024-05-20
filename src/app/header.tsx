@@ -14,6 +14,7 @@ import { Links } from "~/components/svg/links";
 import { LeftDrawer } from "~/components/drawer/left";
 import { env } from "~/env";
 import { InternalNavigationMenuLink } from "~/components/navigation-menu/internal-link";
+import { List, Root } from "@radix-ui/react-navigation-menu";
 
 export const Header = ({ className }: { className: string }) => {
   return (
@@ -24,17 +25,26 @@ export const Header = ({ className }: { className: string }) => {
       )}
     >
       <div className="sm:hidden">
-        <LeftDrawer />
+        <LeftDrawer>
+          <Root orientation="vertical" className="relative h-full w-full">
+            <List className="group flex h-[80dvh] min-h-72 list-none flex-col items-center justify-center gap-3 pb-12 pl-2 pr-4">
+              {internalLinks}
+              <div className="h-10"></div>
+              <NavigationMenuLink route={env.LINKEDIN_URL}>
+                LinkedIn
+              </NavigationMenuLink>
+              <NavigationMenuLink route={env.GITHUB_URL}>
+                GitHub
+              </NavigationMenuLink>
+              <NavigationMenuLink route={env.SOURCE_URL}>
+                Source
+              </NavigationMenuLink>
+            </List>
+          </Root>
+        </LeftDrawer>
       </div>
       <NavigationMenu ariaLabel="Main">
-        <NavigationMenuList>
-          <InternalNavigationMenuLink route="/">
-            Home
-          </InternalNavigationMenuLink>
-          <InternalNavigationMenuLink route="/about">
-            About
-          </InternalNavigationMenuLink>
-        </NavigationMenuList>
+        <NavigationMenuList>{internalLinks}</NavigationMenuList>
       </NavigationMenu>
       <div className="flex">
         <NavigationMenu ariaLabel="">
@@ -65,3 +75,12 @@ export const Header = ({ className }: { className: string }) => {
     </header>
   );
 };
+
+const internalLinks = (
+  <>
+    <InternalNavigationMenuLink route="/">Home</InternalNavigationMenuLink>
+    <InternalNavigationMenuLink route="/about">
+      About
+    </InternalNavigationMenuLink>
+  </>
+);
