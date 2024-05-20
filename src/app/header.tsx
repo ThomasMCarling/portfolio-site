@@ -35,7 +35,7 @@ export const Header = ({ className }: { className: string }) => {
         <NavigationMenu ariaLabel="">
           <NavigationMenuList>
             <NavigationMenuLink route={env.SOURCE_URL}>
-              <CodeIcon className="h-[1.2rem] w-[1.2rem] transition-transform duration-500 group-data-[state=open]:rotate-180" />
+              <CodeIcon className="size-5" />
               <span className="sr-only">Source code</span>
             </NavigationMenuLink>
             <SubNavigationMenu
