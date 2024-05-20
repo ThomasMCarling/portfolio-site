@@ -16,6 +16,7 @@ export const LeftDrawer = ({ children }: { children: ReactNode }) => (
       )}
     >
       <HamburgerMenuIcon className="size-5" />
+      <span className="sr-only">Open menu</span>
     </Trigger>
     <Portal>
       <Overlay className="fixed inset-0 z-50 bg-black/80 sm:hidden" />
