@@ -1,6 +1,6 @@
 # [thomascarling.com](https://www.thomascarling.com)
 
-![](https://deploy-badge.vercel.app/?url=https://www.thomascarling.com/&name=status&style=plastic)
+![e2e](https://github.com/ThomasMCarling/portfolio-site/actions/workflows/playwright.yml/badge.svg)
 
 My portfolio site, written mostly in Typescript.
 
