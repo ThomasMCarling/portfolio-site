@@ -13,6 +13,7 @@ import { SubNavigationMenuLink } from "~/components/navigation-menu/sub-link";
 import { Links } from "~/components/svg/links";
 import { LeftDrawer } from "~/components/drawer/left";
 import { env } from "~/env";
+import { InternalNavigationMenuLink } from "~/components/navigation-menu/internal-link";
 
 export const Header = ({ className }: { className: string }) => {
   return (
@@ -27,8 +28,12 @@ export const Header = ({ className }: { className: string }) => {
       </div>
       <NavigationMenu ariaLabel="Main">
         <NavigationMenuList>
-          <NavigationMenuLink route="/">Home</NavigationMenuLink>
-          <NavigationMenuLink route="/about">About</NavigationMenuLink>
+          <InternalNavigationMenuLink route="/">
+            Home
+          </InternalNavigationMenuLink>
+          <InternalNavigationMenuLink route="/about">
+            About
+          </InternalNavigationMenuLink>
         </NavigationMenuList>
       </NavigationMenu>
       <div className="flex">

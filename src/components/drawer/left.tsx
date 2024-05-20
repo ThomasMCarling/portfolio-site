@@ -5,6 +5,7 @@ import { NavigationMenuLink } from "../navigation-menu/link";
 import { List, Root as NavRoot } from "../navigation-menu/primitives";
 import { env } from "~/env";
 import { Root as DrawerRoot } from "./root";
+import { InternalNavigationMenuLink } from "../navigation-menu/internal-link";
 
 export const LeftDrawer = () => (
   <DrawerRoot>
@@ -24,8 +25,12 @@ export const LeftDrawer = () => (
       <Content className="fixed inset-y-0 left-0 z-50 flex w-auto rounded-r-[10px] border border-zinc-200 bg-white py-10 dark:border-zinc-800 dark:bg-zinc-950 sm:hidden">
         <NavRoot orientation="vertical" className="relative h-full w-full">
           <List className="group flex h-[80dvh] min-h-72 list-none flex-col items-center justify-center gap-3 pb-12 pl-2 pr-4">
-            <NavigationMenuLink route="/">Home</NavigationMenuLink>
-            <NavigationMenuLink route="/about">About</NavigationMenuLink>
+            <InternalNavigationMenuLink route="/">
+              Home
+            </InternalNavigationMenuLink>
+            <InternalNavigationMenuLink route="/about">
+              About
+            </InternalNavigationMenuLink>
             <div className="h-10"></div>
             <NavigationMenuLink route={env.LINKEDIN_URL}>
               LinkedIn

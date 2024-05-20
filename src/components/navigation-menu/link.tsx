@@ -5,10 +5,12 @@ import { cn } from "~/lib/utils";
 
 export const NavigationMenuLink = ({
   route,
+  className,
   children,
 }: {
   route: string;
   children: ReactNode;
+  className?: string;
 }) => (
   <Item>
     <Link href={route} legacyBehavior passHref>
@@ -19,6 +21,7 @@ export const NavigationMenuLink = ({
           "disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-zinc-100/50 data-[state=open]:bg-zinc-100/50 dark:bg-zinc-950",
           "dark:hover:bg-zinc-800 dark:hover:text-zinc-50 dark:focus:bg-zinc-800 dark:focus:text-zinc-50 dark:data-[active]:bg-zinc-800/50",
           "select-none dark:data-[state=open]:bg-zinc-800/50",
+          className,
         )}
       >
         {children}
