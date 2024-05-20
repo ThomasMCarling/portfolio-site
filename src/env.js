@@ -12,7 +12,7 @@ export const env = createEnv({
   },
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    GH_URL: process.env.GITHUB_URL,
+    GH_URL: process.env.GH_URL,
     LINKEDIN_URL: process.env.LINKEDIN_URL,
     SOURCE_URL: process.env.SOURCE_URL,
   },
