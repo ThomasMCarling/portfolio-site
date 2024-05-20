@@ -14,7 +14,7 @@ import { Links } from "~/components/svg/links";
 import { LeftDrawer } from "~/components/drawer/left";
 import { env } from "~/env";
 import { InternalNavigationMenuLink } from "~/components/navigation-menu/internal-link";
-import { List, Root } from "@radix-ui/react-navigation-menu";
+import { List, Root } from "~/components/navigation-menu/primitives";
 
 export const Header = ({ className }: { className: string }) => {
   return (
