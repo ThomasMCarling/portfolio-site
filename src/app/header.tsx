@@ -33,9 +33,7 @@ export const Header = ({ className }: { className: string }) => {
               <NavigationMenuLink route={env.LINKEDIN_URL}>
                 LinkedIn
               </NavigationMenuLink>
-              <NavigationMenuLink route={env.GITHUB_URL}>
-                GitHub
-              </NavigationMenuLink>
+              <NavigationMenuLink route={env.GH_URL}>GitHub</NavigationMenuLink>
               <NavigationMenuLink route={env.SOURCE_URL}>
                 Source
               </NavigationMenuLink>
@@ -64,7 +62,7 @@ export const Header = ({ className }: { className: string }) => {
               <SubNavigationMenuLink href={env.LINKEDIN_URL}>
                 <LinkedInLogoIcon className="size-5" /> LinkedIn
               </SubNavigationMenuLink>
-              <SubNavigationMenuLink href={env.GITHUB_URL}>
+              <SubNavigationMenuLink href={env.GH_URL}>
                 <GitHubLogoIcon className="size-5" /> GitHub
               </SubNavigationMenuLink>
             </SubNavigationMenu>

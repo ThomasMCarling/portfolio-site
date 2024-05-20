@@ -6,13 +6,13 @@ export const env = createEnv({
     NODE_ENV: z.enum(["development", "test", "production"]),
   },
   shared: {
-    GITHUB_URL: z.string().url(),
+    GH_URL: z.string().url(),
     LINKEDIN_URL: z.string().url(),
     SOURCE_URL: z.string().url(),
   },
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
-    GITHUB_URL: process.env.GITHUB_URL,
+    GH_URL: process.env.GITHUB_URL,
     LINKEDIN_URL: process.env.LINKEDIN_URL,
     SOURCE_URL: process.env.SOURCE_URL,
   },
