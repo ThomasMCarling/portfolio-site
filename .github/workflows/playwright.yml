@@ -7,6 +7,10 @@ jobs:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     environment: Production
+    env:
+      LINKEDIN_URL: ${{ vars.LINKEDIN_URL }}
+      GH_URL: ${{ vars.GH_URL }}
+      SOURCE_URL: ${{ vars.SOURCE_URL }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
