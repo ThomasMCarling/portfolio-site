@@ -6,7 +6,7 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
-    environment: Production
+    environment: CI
     env:
       LINKEDIN_URL: ${{ vars.LINKEDIN_URL }}
       GH_URL: ${{ vars.GH_URL }}
