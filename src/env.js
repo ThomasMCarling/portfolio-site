@@ -13,7 +13,7 @@ export const env = (() => {
       GH_URL: process.env.GH_URL,
       LINKEDIN_URL: process.env.LINKEDIN_URL,
       SOURCE_URL: process.env.SOURCE_URL,
-      BASE_URL: process.env.VERCEL_PROJECT_PRODUCTION_URL,
+      BASE_URL: `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`,
     },
     skipValidation: !!process.env.SKIP_ENV_VALIDATION,
     emptyStringAsUndefined: true,
