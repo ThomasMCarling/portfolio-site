@@ -17,7 +17,8 @@ test(`opening link submenu and clicking 'LinkedIn' from home page navigates to m
   await page.getByRole("button", { name: "External links" }).click();
   await page.getByRole("link", { name: "LinkedIn" }).click();
 
-  await expect(page).toHaveURL(RegExp(env.LINKEDIN_URL));
+  await expect(page).toHaveURL(/https:\/\/www.linkedin.com\//);
+  await expect(page).toHaveURL(/thomas-carling/);
 });
 
 test(`opening link submenu and clicking 'GitHub' from home page navigates to my GitHub account`, async ({
