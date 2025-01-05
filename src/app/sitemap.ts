@@ -1,16 +1,16 @@
 import type { MetadataRoute } from "next";
+import { env } from "~/env";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
   return [
     {
-      url: baseUrl,
+      url: env.BASE_URL,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${env.BASE_URL}/about`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.5,

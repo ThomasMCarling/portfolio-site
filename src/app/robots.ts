@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
+import { env } from "~/env";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
   return {
     rules: [
       {
@@ -14,7 +14,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/about/", //page not yet finished
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${env.BASE_URL}/sitemap.xml`,
   };
 }
 
