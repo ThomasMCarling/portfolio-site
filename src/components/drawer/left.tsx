@@ -1,4 +1,4 @@
-import { cn } from "~/lib/utils";
+import { cn } from "~/shadcn/lib/utils";
 import { Trigger, Portal, Overlay, Content } from "./vaul";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { Root as DrawerRoot } from "./root";

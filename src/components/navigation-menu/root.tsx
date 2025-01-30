@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cn } from "~/lib/utils";
+import { cn } from "~/shadcn/lib/utils";
 import { type ReactNode } from "react";
 import { Viewport, Root } from "./primitives";
 

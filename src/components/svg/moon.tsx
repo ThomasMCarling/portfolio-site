@@ -1,4 +1,4 @@
-import { cn } from "~/lib/utils";
+import { cn } from "~/shadcn/lib/utils";
 import { Svg } from "./wrapper";
 
 export const Moon = ({ className }: { className?: string }) => {

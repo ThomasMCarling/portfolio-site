@@ -22,9 +22,9 @@ My portfolio site, written mostly in Typescript.
 
 This project uses the new [App router](https://nextjs.org/docs/app) model. Routing is file based, inside of src/app. Specific file name conventions can be found [here](https://nextjs.org/docs/app/api-reference/file-conventions), and files named any other way (such as header.tsx) are ignored by the router.
 
-The 'lib' and 'components/ui' directory are used by shadcn, with the components directory containing any generated components, and lib containing the cn utility (a useful function to combine tailwind classes without name clashes, and also simplify the syntax of adding conditional classes). I don't intend to add any additional code to either folder.
+The 'shadcn' directory is used by shadcn, with the components directory containing any generated components, and lib containing the cn utility (a useful function to combine tailwind classes without name clashes, and also simplify the syntax of adding conditional classes). I don't intend to add any additional code to the folder.
 
-Any reusable components that I write will be in the components directory, or subdirectories excluding ui. Most of the jsx components are server components by default, and any client components are explicitly marked with 'use client' at the top of the page, or rendered by a client component.
+Any reusable components that I write will be in the components directory, or subdirectories. I will also move any shadcn components that I want to alter into this directory. Most of the jsx components are server components by default, and any client components are explicitly marked with 'use client' at the top of the page, or rendered by a client component.
 
 ## Deployment
 

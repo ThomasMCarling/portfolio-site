@@ -1,6 +1,6 @@
 import { Item } from "@radix-ui/react-dropdown-menu";
 import { type MouseEventHandler, type ReactNode } from "react";
-import { cn } from "~/lib/utils";
+import { cn } from "~/shadcn/lib/utils";
 
 export const DropdownMenuItem = ({
   children,

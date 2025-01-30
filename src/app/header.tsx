@@ -7,7 +7,7 @@ import { NavigationMenuList } from "~/components/navigation-menu/list";
 import { NavigationMenu } from "~/components/navigation-menu/root";
 import { NavigationMenuLink } from "~/components/navigation-menu/link";
 import { ThemeToggle } from "~/components/theme-toggle";
-import { cn } from "~/lib/utils";
+import { cn } from "~/shadcn/lib/utils";
 import { SubNavigationMenu } from "~/components/navigation-menu/sub-root";
 import { SubNavigationMenuLink } from "~/components/navigation-menu/sub-link";
 import { Links } from "~/components/svg/links";
@@ -15,6 +15,7 @@ import { LeftDrawer } from "~/components/drawer/left";
 import { env } from "~/env";
 import { InternalNavigationMenuLink } from "~/components/navigation-menu/internal-link";
 import { List, Root } from "~/components/navigation-menu/primitives";
+import { Title } from "@radix-ui/react-dialog";
 
 export const Header = ({ className }: { className: string }) => {
   return (
@@ -27,6 +28,7 @@ export const Header = ({ className }: { className: string }) => {
       <div className="sm:hidden">
         <LeftDrawer>
           <Root orientation="vertical" className="relative h-full w-full">
+            <Title hidden>navigation menu</Title>
             <List className="group flex h-[80dvh] min-h-72 list-none flex-col items-center justify-center gap-3 pb-12 pl-2 pr-4">
               {internalLinks}
               <div className="h-10"></div>

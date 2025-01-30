@@ -1,6 +1,6 @@
 import { Content, DropdownMenuPortal } from "@radix-ui/react-dropdown-menu";
 import { type ReactNode } from "react";
-import { cn } from "~/lib/utils";
+import { cn } from "~/shadcn/lib/utils";
 
 export const DropdownMenuContent = ({ children }: { children: ReactNode }) => (
   <DropdownMenuPortal>

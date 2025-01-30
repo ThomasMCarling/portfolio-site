@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import { NavigationMenuLink } from "./link";
-import { cn } from "~/lib/utils";
+import { cn } from "~/shadcn/lib/utils";
 import type { ReactNode } from "react";
 
 export const InternalNavigationMenuLink = ({
