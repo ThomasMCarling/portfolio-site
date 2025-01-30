@@ -19,8 +19,8 @@ export const ThemeToggle = () => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <Moon className="size-0 dark:size-5" />
-          <Sun className="size-5 dark:size-0" />
+          <Moon className="hidden size-5 dark:block" />
+          <Sun className="size-5 dark:hidden" />
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
